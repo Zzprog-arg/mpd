@@ -1,4 +1,3 @@
-```javascript
 const express = require('express')
 const dns = require('node:dns').promises
 const fs = require('node:fs')
@@ -10,9 +9,7 @@ const app = express()
 
 const PORT = Number(process.env.PORT || 3000)
 const HLS_ROOT = path.join(process.env.HLS_ROOT || '/tmp', 'hls-streams')
-const SESSION_TTL_MS = Number(
-  process.env.SESSION_TTL_MS || 10 * 60 * 1000
-)
+const SESSION_TTL_MS = Number(process.env.SESSION_TTL_MS || 10 * 60 * 1000)
 
 const sessions = new Map()
 
@@ -467,4 +464,3 @@ process.on('SIGINT', () => {
 
   process.exit(0)
 })
-```
